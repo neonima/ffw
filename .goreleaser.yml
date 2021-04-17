@@ -1,0 +1,8 @@
+builds:
+  -
+    main: ./cmd/main.go
+    binary: fftw
+    goos:
+      - linux
+      - windows
+      - darwin
