@@ -20,7 +20,7 @@ func RenameFile(str string) string {
 }
 
 func RemoveSpecialChars(str string) string {
-	re, err := regexp.Compile(`[^\w/.]`)
+	re, err := regexp.Compile(`[^\w/.-]`)
 	if err != nil {
 		log.Fatal(err)
 	}
