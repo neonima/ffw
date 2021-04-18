@@ -39,14 +39,11 @@ func GetExtensionFromString(str string) string {
 
 func IsExtension(file string, extensions ...string) bool {
 	fext := GetExtensionFromString(file)
-	if len(extensions) == 0 {
-		return false
-	}
 	for _, ext := range extensions {
 		if fext != ext {
 			continue
 		}
 		return true
 	}
-	return false
+	return len(extensions) == 0
 }
