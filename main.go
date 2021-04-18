@@ -59,13 +59,16 @@ func Run(c *cli.Context) error {
 	src = "."
 
 	if dry {
-		fmt.Println("Files about to change")
+		fmt.Println("### DRY MODE ###")
+		fmt.Println("#  No changes  #")
+		fmt.Println("#   Will be    #")
+		fmt.Println("#    Made      #")
+		fmt.Println("################")
 	}
 	filesToChange, err := file.Walk(src, recurse, extensions...)
 	if err != nil {
 		return err
 	}
-
 	for _, fileToRename := range filesToChange {
 		newName := stringster.RenameFile(fileToRename)
 		fmt.Println(fileToRename, "=>", newName)
@@ -74,6 +77,12 @@ func Run(c *cli.Context) error {
 				return err
 			}
 		}
+	}
+
+	if dry {
+		fmt.Printf("%v files changes will be made \n", len(filesToChange))
+	} else {
+		fmt.Printf("%v files changed \n", len(filesToChange))
 	}
 
 	return nil

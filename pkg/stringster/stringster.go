@@ -40,7 +40,7 @@ func GetExtensionFromString(str string) string {
 func IsExtension(file string, extensions ...string) bool {
 	fext := GetExtensionFromString(file)
 	if len(extensions) == 0 {
-		return false
+		return true
 	}
 	for _, ext := range extensions {
 		if fext != ext {
