@@ -12,31 +12,30 @@ import (
 
 func main() {
 	app := &cli.App{
-		Name:   "fftw",
+		Name:   "ffw",
 		Usage:  "A dead simple tool to rename you file for smooth web access!",
 		Action: Run,
 		Flags: []cli.Flag{
 			&cli.BoolFlag{
-				Name:        "recursive",
-				Value:       false,
-				Aliases:     []string{"r"},
-				DefaultText: "Use this flag is you want to rename files recursively",
+				Name:    "recursive",
+				Value:   false,
+				Aliases: []string{"r"},
+				Usage:   "Use this flag is you want to rename files recursively",
 			},
 			&cli.StringSliceFlag{
-				Name:        "extensions",
-				Aliases:     []string{"e"},
-				DefaultText: "Only rename the specified extensions",
-				Usage:       "-e=.png,.pdf | rename only `.png` et `.pdf` file",
+				Name:    "extensions",
+				Aliases: []string{"e"},
+				Usage:   "Only rename the specified extensions",
 			},
 			&cli.StringFlag{
-				Name:        "source",
-				Aliases:     []string{"s"},
-				DefaultText: "source path where to rename files",
+				Name:    "source",
+				Aliases: []string{"s"},
+				Usage:   "source path where to rename files",
 			},
 			&cli.BoolFlag{
-				Name:        "dry",
-				Aliases:     []string{"d"},
-				DefaultText: "shows all the file that will be modified with their new name",
+				Name:    "dry",
+				Aliases: []string{"d"},
+				Usage:   "shows all the file that will be modified with their new name",
 			},
 		},
 	}
