@@ -1,7 +1,7 @@
 package file
 
 import (
-	"github.com/neonima/fftw/pkg/stringster"
+	"github.com/neonima/ffw/pkg/stringster"
 	"io/fs"
 	"io/ioutil"
 	"path/filepath"

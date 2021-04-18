@@ -1,4 +1,4 @@
-module github.com/neonima/fftw
+module github.com/neonima/ffw
 
 go 1.16
 
