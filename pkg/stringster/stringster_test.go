@@ -64,7 +64,7 @@ func TestRenameFile(t *testing.T) {
 		expected string
 	}{
 		{
-			title:    "it should replace all accent",
+			title:    "it should remove special chars and convert spaces to underscore",
 			input:    "hhg/Mon Fichier trés chiant.png",
 			expected: "hhg/mon_fichier_tres_chiant.png",
 		},

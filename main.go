@@ -72,11 +72,14 @@ func Run(c *cli.Context) error {
 	for _, fileToRename := range filesToChange {
 		newName := stringster.RenameFile(fileToRename)
 		fmt.Println(fileToRename, "=>", newName)
-		if !dry {
-			if err = os.Rename(fileToRename, newName); err != nil {
-				return err
-			}
+		if dry {
+			continue
 		}
+
+		if err = os.Rename(fileToRename, newName); err != nil {
+			return err
+		}
+
 	}
 
 	if dry {
