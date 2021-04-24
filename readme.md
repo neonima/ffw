@@ -33,10 +33,10 @@ Say that you have these crappy png named files in `./src/images`
 
 simply run `cd src/images && ffw` or with the source (-s) flag `ffw -s ./src/images`
 ```text
-- src/images/le_fichier_galee_a_renommer_1.png
-- src/images/le_fichier_galee_a_renommer_2.png
-- src/images/le_fichier_galee_a_renommer_3.png
-- src/images/le_fichier_galee_a_renommer_4.png
+- src/images/le_fichier_galere_a_renommer_1.png
+- src/images/le_fichier_galere_a_renommer_2.png
+- src/images/le_fichier_galere_a_renommer_3.png
+- src/images/le_fichier_galere_a_renommer_4.png
 ```
 
 ## Problem
@@ -56,10 +56,10 @@ Add `-e=[.your_extension1,.your_extension2]`
 simply run `cd src/images && ffw -e=.png` or `ffw -s ./src/images -e=.png`
 ```text
 - src/images/mon fichier custom.jeanclaudevandamn
-- src/images/le_fichier_galee_a_renommer_1.png
-- src/images/le_fichier_galee_a_renommer_2.png
-- src/images/le_fichier_galee_a_renommer_3.png
-- src/images/le_fichier_galee_a_renommer_4.png
+- src/images/le_fichier_galere_a_renommer_1.png
+- src/images/le_fichier_galere_a_renommer_2.png
+- src/images/le_fichier_galere_a_renommer_3.png
+- src/images/le_fichier_galere_a_renommer_4.png
 ```
 
 # How can I check how the files will be changed?
