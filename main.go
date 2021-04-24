@@ -13,7 +13,7 @@ import (
 func main() {
 	app := &cli.App{
 		Name:   "ffw",
-		Usage:  "A dead simple tool to rename you file for smooth web access!",
+		Usage:  "A dead simple tool to rename your file for smooth web access!",
 		Action: Run,
 		Flags: []cli.Flag{
 			&cli.BoolFlag{

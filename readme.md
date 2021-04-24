@@ -1,5 +1,5 @@
 # ffw - Friendly Files for the Web
-Easily rename file from a folder to be compatible with the web
+Easily rename files from a folder to be compatible with the web
 
 Run `ffw` and that's it!
 # Installation
@@ -69,7 +69,7 @@ For dry run use `-d` flag
 
 ```text
 NAME:
-   ffw - A dead simple tool to rename you file for smooth web access!
+   ffw - A dead simple tool to rename your file for smooth web access!
 
 USAGE:
    main [global options] command [command options] [arguments...]
@@ -83,5 +83,4 @@ GLOBAL OPTIONS:
    --source value, -s value      source path where to rename files
    --dry, -d                     shows all the file that will be modified with their new name (default: false)
    --help, -h                    show help (default: false)
-
 ```
