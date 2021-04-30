@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/neonima/ffw/pkg/file"
+	"github.com/neonima/ffw/internal/file"
 	"github.com/neonima/ffw/pkg/stringster"
 	"log"
 	"os"

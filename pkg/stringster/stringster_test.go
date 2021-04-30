@@ -147,3 +147,36 @@ func TestIsExtension(t *testing.T) {
 		})
 	}
 }
+
+func TestToLowerWithNoSpace(t *testing.T) {
+	tests := []struct {
+		title     string
+		inputFile string
+		expected  string
+	}{
+		{
+			title:     "It should return no space",
+			inputFile: "hhg/the          long     space.png",
+			expected:  "hhg/the__________long_____space.png",
+		},
+		{
+			title:     "It should return no caps",
+			inputFile: "hhg/THEJHFDKHDFKJFDKJHFKJDH.png",
+			expected:  "hhg/thejhfdkhdfkjfdkjhfkjdh.png",
+		},
+		{
+			title:     "It should return no space and no caps",
+			inputFile: "hhg/THE          LONG     SPACE.png",
+			expected:  "hhg/the__________long_____space.png",
+		},
+	}
+
+	for _, test := range tests {
+		t.Run(test.title, func(t *testing.T) {
+			is := is.New(t)
+			res := stringster.ToLowerWithNoSpace(test.inputFile)
+			is.Equal(test.expected, res)
+
+		})
+	}
+}

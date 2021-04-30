@@ -12,11 +12,15 @@ import (
 )
 
 func RenameFile(str string) string {
-	str = strings.ToLower(strings.Replace(str, " ", "_", -1))
+	str = ToLowerWithNoSpace(str)
 	str = RemoveAccent(str)
 	str = RemoveSpecialChars(str)
 
 	return str
+}
+
+func ToLowerWithNoSpace(str string) string {
+	return strings.ToLower(strings.Replace(str, " ", "_", -1))
 }
 
 func RemoveSpecialChars(str string) string {
